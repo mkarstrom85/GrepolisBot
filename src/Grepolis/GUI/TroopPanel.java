@@ -104,7 +104,7 @@ public class TroopPanel extends JFXPanel {
             @Override
             public void run() {
                 GridPane grid = new GridPane();
-                Scene scene = new Scene(grid, 200, 100);
+                Scene scene = new Scene(grid, 200, 130);
 
                 grid.setHgap(0);
                 grid.setVgap(0);
@@ -526,6 +526,7 @@ public class TroopPanel extends JFXPanel {
 
                 //Row 1
                 grid.add(troopsLabel, 0, 0);
+//                GridPane.setMargin(automaticFestivals, new Insets(0, 0, 0, 20));
                 //Row 2
                 grid.add(swordPic, 0, 1);
                 grid.add(slingerPic, 1, 1);
@@ -586,8 +587,8 @@ public class TroopPanel extends JFXPanel {
 
 
 //                grid.setStyle("-fx-border-color: black");
-                grid.setPrefSize(200, 100); // Default width and height
-//                grid.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+                grid.setPrefSize(200, 130); // Default width and height
+                grid.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
 
                 grid.setStyle("-fx-border-color: black;");
 

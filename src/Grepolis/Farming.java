@@ -60,8 +60,6 @@ public class Farming {
     public void parseHTML(String townData) {
         townData = townData.replaceAll("FarmData:200", "");
 
-//        System.out.println("Farm Data: " +townData);
-
         JsonElement jElement = new JsonParser().parse(townData);
         JsonObject jObject = jElement.getAsJsonObject();
         JsonObject json = jObject.getAsJsonObject("json");
@@ -76,7 +74,10 @@ public class Farming {
         }
 
         if (currentTown != null) {
+<<<<<<< HEAD
 //            System.out.println("Current Town Data: " +currentTown.toString());
+=======
+>>>>>>> parent of f78dfcd (Automatic Academy added)
             storage = currentTown.get("storage_volume").getAsInt();
             booty = currentTown.get("booty").getAsBoolean();
             diplomacy = currentTown.get("diplomacy_researched").getAsBoolean();
@@ -87,6 +88,7 @@ public class Farming {
             stone = resources.get("stone").getAsInt();
             iron = resources.get("iron").getAsInt();
             town.setFullStorage(((wood == storage) && (stone == storage) && (iron == storage)));
+
         }
 ////        log("Town Data: " + townData);
 //        String townString = townData.substring(townData.indexOf(town.getId() + ""));
